@@ -1,5 +1,5 @@
-#N canvas 990 -9 921 1026 12;
-#X floatatom 30 195 5 0 0 0 - - -;
+#N canvas 989 19 921 926 12;
+#X floatatom 30 195 5 0 0 0 - - - 0;
 #X obj 30 130 inlet;
 #X text 26 97 float midi;
 #X text 53 32 x mod 12 = 0 4 and 7 -> proper harmony;
@@ -8,24 +8,26 @@
 #X obj 436 190 list-abs/list-drip;
 #X obj 381 445 pack 0 0;
 #X obj 395 306 + 1;
-#X floatatom 381 399 5 0 0 0 - - -;
+#X floatatom 381 399 5 0 0 0 - - - 0;
 #X obj 394 277 float;
-#X obj 394 240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 394 240 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 255 447 pack 0 0;
 #X obj 504 457 pack 0 0;
 #X obj 513 423 t f f;
-#X obj 388 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 388 182 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 444 240 -1;
 #X obj 292 492 clone project-singletone 6;
 #X obj 381 375 % 6;
+#X obj 515 257 print;
 #X connect 0 0 12 1;
 #X connect 1 0 0 0;
 #X connect 4 0 6 0;
 #X connect 4 0 15 0;
 #X connect 6 0 7 1;
 #X connect 6 0 11 0;
+#X connect 6 0 19 0;
 #X connect 7 0 17 1;
 #X connect 8 0 18 0;
 #X connect 9 0 10 1;
